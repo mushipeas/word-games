@@ -40,16 +40,18 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 2px;
 }
 
 .block {
-  background-color: #EDE6E1;
+  background-color: rgba(212, 199, 190, 0.651);
   margin: 1rem;
+  border-radius: 5%;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
-.card {
-;
+.block:hover {
+  background-color: rgba(187, 172, 162, 0.651);
 }
 
 #old-word {
@@ -57,6 +59,9 @@ h3 {
   text-align: right;
   float:right;
   flex: 1;
+  direction: rtl;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 #active-word {
@@ -69,6 +74,11 @@ h3 {
   text-align: left;
   float: left;
   flex: 1;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
 }
 
 #wordSpace {
@@ -78,10 +88,6 @@ h3 {
 #wordSpace > p {
   font-family: sans-serif;
   font-size: 3rem;
-}
-
-#mask {
-
 }
 
 #score {
