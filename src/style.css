@@ -1,0 +1,130 @@
+* {
+  cursor:crosshair;
+  -webkit-font-smoothing: antialiased;
+}
+
+:root {
+  --width : 1rem;
+  --revWidth : -1rem;
+}
+
+body {
+  background-color: #FDF6F1;
+  margin: 3rem;
+}
+
+h1 {
+  font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+	font-size: 15rem;
+  text-align: center;
+  font-weight: bold;
+  /*find way to align to vertical - middle*/
+	font-style: normal;
+	font-variant: normal;
+/*	font-weight: 500; /*want this?*/
+  text-shadow: 0.1rem 0.1rem 0.4rem; /*pretty*/
+}
+
+h2 {
+  text-align: center;
+}
+
+h3 {
+  font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+	font-size: 4rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.block {
+  background-color: #EDE6E1;
+  margin: 1rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.card {
+;
+}
+
+#old-word {
+  color: grey;
+  text-align: right;
+  float:right;
+  flex: 1;
+}
+
+#active-word {
+  color: red;
+  margin: 0 10px 10px;
+}
+
+#new-word {
+  color: grey;
+  text-align: left;
+  float: left;
+  flex: 1;
+}
+
+#wordSpace {
+  display: flex;
+}
+
+#wordSpace > p {
+  font-family: sans-serif;
+  font-size: 3rem;
+}
+
+#mask {
+
+}
+
+#score {
+  text-align: center;
+  font-weight: lighter;
+  font-size: 6rem;
+  text-shadow: 0, 0.5rem, 0.2rem;
+  margin-top: 4rem;
+}
+
+
+/* modified from animate.css */
+.animated {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translate3d(var(--revWidth), 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInLeft {
+  animation-name: slideInLeft;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translate3d(var(--width), 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInRight {
+  animation-name: slideInRight;
+}
