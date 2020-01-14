@@ -151,7 +151,7 @@ var refreshWordSpace = function(change){
   }
 
   var newWordSpace = $('<div id="wordSpace" class="row"></div>');
-  newWordSpace.append($('<p id="old-word" class="animated ' + animation +'"></p>').text(oldWord  + " "));
+  newWordSpace.append($('<p id="old-word" class="animated ' + animation + '"></p>').text(oldWord + "\u200E"));
   newWordSpace.append($('<p id="active-word" class="animated ' + animation +'"></p>').text(activeWord  + " "));
   newWordSpace.append($('<p id="new-word" class="animated ' + animation +'"></p>').text(newWord + "..."));
   document.documentElement.style.setProperty('--width',scrollDist);
