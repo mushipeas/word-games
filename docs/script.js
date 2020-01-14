@@ -165,7 +165,7 @@ var startTimer = function(){
   scoreCount.append($("<p id='score'></p>").text("0"));
   var d = new Date();
   startTime = d.getTime();
-  //var timer = setInterval(updateTimer(), 100);
+  timer = setInterval(updateTimer, 100);
 }
 
 var updateTimer = function(){
